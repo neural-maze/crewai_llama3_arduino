@@ -11,8 +11,7 @@ class CompileAndUploadToArduinoTool(BaseTool):
     board_fqbn: str = "The board type, e.g. 'arduino:avr:uno'"
     port: str = "The port where the Arduino is connected"
 
-    def __init__(self, ino_file_dir: str, board_fqbn: str = "arduino:avr:uno", port: str = "/dev/cu.usbmodem1201",
-                 **kwargs):
+    def __init__(self, ino_file_dir: str, board_fqbn: str, port: str, **kwargs):
         super().__init__(**kwargs)
         self.ino_file_dir = ino_file_dir
         self.board_fqbn = board_fqbn
