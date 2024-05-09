@@ -4,7 +4,13 @@ from textwrap import dedent
 from crewai import Agent
 from langchain_openai import ChatOpenAI
 
-from tools.arduino import compile_and_upload_to_arduino_tool
+from tools.arduino import CompileAndUploadToArduinoTool
+
+tool = CompileAndUploadToArduinoTool(
+    ino_file_dir="./tmp",
+    board_fqbn="arduino:avr:uno",
+    port="/dev/cu.usbmodem1201"
+)
 
 llama3 = ChatOpenAI(
     model="llama3",
@@ -38,5 +44,5 @@ arduino_uploader_agent = Agent(
     ),
     verbose=True,
     allow_delegation=False,
-    tools=[compile_and_upload_to_arduino_tool]
+    tools=[tool]
 )
