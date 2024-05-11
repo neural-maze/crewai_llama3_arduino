@@ -6,7 +6,50 @@
 
 ---
 
-A funny project where I've created a [crewAI tool](tools%2Farduino.py) for connecting
-this framework with my Arduino UNO. The code we are going to generate (using
-Ollama's Llama3) is going to be very simple, just turning on an off a series of
-three leds. In future tutorials, we'll try to make something more complex ...
+## Description
+
+A funny project where we'll connecting [crewAI] with an Arduino. The final
+crew consists of [two agents](agents.py).
+
+1️⃣ Sketch Programmer Agent
+
+It receives a circuit description and its expected behaviour (e.g. light on and off a LED repeatedly) generating, 
+in return, a sketch file (the script containing the code for sending instructions to Arduino).
+
+2️⃣ Web Researcher
+
+Takes the generated sketch file, compiles it and uploads the instructions into the Arduino. To achieve its goal, this agent uses a [custom tool](tools%2Farduino.py)
+for the compilation and uploading.
+
+![crewai_linkedin_influencer.drawio.svg](..%2F..%2Fthe_neural_maze_blog%2Fcontent%2Fposts%2F202405-crewai-ollama-arduino%2Fimg%2Fcrewai_linkedin_influencer.drawio.svg)
+
+## Usage
+
+There are a couple of prerequisites for running this project:
+
+1️⃣ Arduino board
+
+Since this project seeks to connect crewAI and Arduino ... you should 
+have an Arduino 😅. In my case I was using an [Arduino UNO](https://store.arduino.cc/products/arduino-uno-rev3).
+
+2️⃣ Arduino CLI
+
+Apart from the Arduino board, you'll also need to install the Arduino CLI. This is 
+the CLI used by the custom tool for compiling and uploading the instructions to the Arduino.
+
+Check the installation guide [here](https://arduino.github.io/arduino-cli/0.35/installation/).
+
+3️⃣ Project dependencies
+
+Finally, you need to install the project dependencies defined in the
+requirements file.
+
+```
+pip install -r requirements.txt
+```
+
+And, to run the kickoff the crew.
+
+```
+python main.py
+```
