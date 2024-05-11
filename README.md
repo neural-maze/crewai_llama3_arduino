@@ -21,7 +21,7 @@ in return, a sketch file (the script containing the code for sending instruction
 Takes the generated sketch file, compiles it and uploads the instructions into the Arduino. To achieve its goal, this agent uses a [custom tool](tools%2Farduino.py)
 for the compilation and uploading.
 
-![crewai_linkedin_influencer.drawio.svg](..%2F..%2Fthe_neural_maze_blog%2Fcontent%2Fposts%2F202405-crewai-ollama-arduino%2Fimg%2Fcrewai_linkedin_influencer.drawio.svg)
+![crewai_linkedin_influencer.drawio.svg](img%2Fcrewai_linkedin_influencer.drawio.svg)
 
 ## Usage
 
