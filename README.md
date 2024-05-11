@@ -23,7 +23,7 @@ for the compilation and uploading.
   
   
 <p align="center">
-    <img alt="img" src="img/crewai_linkedin_influencer.drawio.svg" width=400 />
+    <img alt="img" src="img/crewai_linkedin_influencer.drawio.svg" width=470 />
 </p>
 
 
